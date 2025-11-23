@@ -1,0 +1,49 @@
+name: Daily G1 Headline Scraper
+
+on:
+  workflow_dispatch: # Permite rodar manualmente para testes
+  schedule:
+    # Cron syntax: m h dom mon dow
+    # 09:00 UTC = 06:00 Brasil (Horário Padrão)
+    - cron: '0 9 * * *'
+
+permissions:
+  contents: write # Dá permissão explícita para o bot escrever no repositório
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 1. Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip' # Faz cache das dependências para rodar mais rápido
+
+      - name: 3. Instalar dependências
+        run: |
+          pip install -r requirements.txt
+
+      - name: 4. Executar Scraper
+        run: python scraper.py
+
+      - name: 5. Commit e Push
+        run: |
+          git config --global user.name 'G1 Bot'
+          git config --global user.email 'actions@github.com'
+          
+          # Adiciona o arquivo gerado
+          git add headline.txt
+          
+          # Verifica se houve mudança real antes de commitar (evita commits vazios)
+          if [[ -n $(git status -s headline.txt) ]]; then
+            git commit -m "docs: daily headline update [skip ci]"
+            git push
+            echo "Manchete atualizada no repositório."
+          else
+            echo "Nenhuma mudança na manchete detectada."
+          fi
