@@ -1,4 +1,4 @@
-Data: 2026-04-06 06:59:18
-Manchete: O ASSUNTO: o que muda no TSE nas eleições deste ano
-Link: https://g1.globo.com/podcast/o-assunto/noticia/2026/04/06/as-regras-do-jogo-o-que-muda-para-o-tribunal-superior-eleitoral-em-2026-o-assunto-1694.ghtml
+Data: 2026-04-07 06:57:48
+Manchete: Como os EUA usam IA na guerra para lançar ataques letais em minutos
+Link: https://g1.globo.com/tecnologia/noticia/2026/04/07/project-maven-como-os-eua-usam-ia-como-tecnologia-de-guerra-para-lancar-ataques-letais-em-minutos.ghtml
 ----------------------------------------
