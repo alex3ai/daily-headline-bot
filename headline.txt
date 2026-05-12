@@ -1,4 +1,4 @@
-Data: 2026-05-11 08:56:03
-Manchete: Aplicação a partir de R$ 1: conheça novo Tesouro Reserva lançado hoje
-Link: https://g1.globo.com/economia/noticia/2026/05/11/como-funciona-o-novo-tesouro-reserva.ghtml
+Data: 2026-05-12 08:10:35
+Manchete: Irã ameaça enriquecer urânio a 90% se sofrer novos ataques dos EUA
+Link: https://g1.globo.com/mundo/noticia/2026/05/12/ira-ameaca-enriquecer-uranio-a-90percent-se-sofrer-novos-ataques-dos-eua.ghtml
 ----------------------------------------
